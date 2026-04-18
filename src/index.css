@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-teko: "Teko", sans-serif;
+  
+  /* Primary Brand Color: Vibrant Lime Green */
+  --color-primary: #bfd733; 
+  --color-accent: #d8f05e;
+
+  /* Theme Colors */
+  --color-obsidian: #020408;
+  --color-obsidian-light: #0a0c12;
+  
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Marquee animation */
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-slate-100 antialiased font-sans min-h-screen relative overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  /* Premium Dark Glass */
+  .glass-dark {
+    @apply bg-white/5 backdrop-blur-[40px] border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)];
+  }
+  
+  .glass-panel {
+    @apply bg-white/[0.03] backdrop-blur-3xl border border-white/10 shadow-2xl;
+  }
+  
+  .glass-card {
+    @apply bg-white/[0.05] backdrop-blur-2xl border border-white/[0.12] shadow-xl hover:border-primary/20 transition-all duration-500;
+  }
+  
+  /* Glowing Accent Glass */
+  .glass-glow {
+    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/10 shadow-[0_0_40px_rgba(191,215,51,0.05)];
+  }
+
+  .btn-glass {
+    @apply relative overflow-hidden px-8 py-4 rounded-full font-semibold transition-all border border-primary/40 bg-primary/5 hover:bg-primary/20 text-white backdrop-blur-md flex items-center gap-2;
+  }
+}
+
+/* Deep Background Orbs */
+.bg-orb-1 {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 70vw;
+  height: 70vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(191,215,51,0.08) 0%, rgba(2,4,8,0) 70%);
+  z-index: -1;
+  filter: blur(80px);
+}
+
+.bg-orb-2 {
+  position: fixed;
+  bottom: -20%;
+  right: -10%;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(216,240,94,0.05) 0%, rgba(2,4,8,0) 70%);
+  z-index: -1;
+  filter: blur(100px);
+}
