@@ -1,62 +1,113 @@
-# 🌟 Dream Life Products - Corporate Website
+# 🌟 Dream Life Products
 
-Dream Life Products is a highly performant corporate website built with React and Vite. It relies on client-side dynamic routing, scroll-driven animations, and a centralized data architecture to manage and display content natively. Users navigate software, hardware, and services catalogs and contact the company instantly via dynamically generated WhatsApp links.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![React Version](https://img.shields.io/badge/react-18.x-blue)
+![Vite](https://img.shields.io/badge/vite-5.x-purple)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-## ✨ Key Features
+A high-performance corporate website built with React and Vite. It utilizes dynamic client-side routing, scroll-driven animations, and a centralized data architecture to manage product, service, and hardware catalogs.
 
-- 📂 **Centralized Data Architecture:** A dedicated `data` directory acts as the single source of truth for all products, services, and text content.
-- ⚡ **Dynamic Routing:** React Router automates product details pages based on unique data element IDs.
-- 📱 **WhatsApp API Integration:** One-click contact buttons dynamically format messages containing the product name and active URL.
-- 🎨 **Premium UI/UX:** The interface deploys a deep obsidian theme with neon lime green accents, scroll-triggered framer-motion animations, and pure CSS marquee scrolling.
-- 🧹 **Optimized Codebase:** Developers maintain strictly documented, descriptive code block comments while aggressively purging dead files to keep bundle sizes compact.
+## 📑 Table of Contents
 
-## 🛠 System Requirements
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Architecture](#-project-architecture)
+- [Installation Guide](#-installation-guide)
+- [Development Guidelines](#-development-guidelines)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-To execute this project, ensure your environment meets the following specifications:
+## ✨ Features
 
-- **Node.js:** v18.0.0 or higher
-- **Package Manager:** npm (v9.0.0 or higher)
-- **Browser:** Any modern web browser (Google Chrome, Firefox, Safari, Edge)
+- 📂 **Centralized Data:** The `/data` directory acts as the single source of truth. Update text, links, and media without altering component logic.
+- ⚡ **Dynamic Product Pages:** React Router renders details pages on demand based on unique dataset IDs.
+- 📱 **WhatsApp Integration:** Contact buttons generate `.wa.me` links configured with active product names and page URLs.
+- 🎨 **Responsive Dark UI:** Combines a deep obsidian theme with neon lime green accents (`#bfd733`). Employs Framer Motion for scroll-triggered events and pure CSS for infinite marquee ribbons.
+- 🧹 **Optimized Bundle:** Implements strict modularity and eliminates unused code to ensure fast load times.
 
-## 🚀 Step-by-Step Installation Guide
+## 🛠 Tech Stack
 
-Follow these sequential instructions to establish the development environment.
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Routing:** React Router v6
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
-1. **Clone the repository:**
-   ```bash
-   git clone <repository_url>
-   cd "Dream Life/dream-life-frontend"
-   ```
+## 🏗 Project Architecture
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+```text
+dream-life-frontend/
+├── public/                 # Static assets (images, logos)
+├── src/
+│   ├── components/
+│   │   ├── layout/         # Global navigation and footers
+│   │   ├── pages/          # Full viewport routing components
+│   │   └── sections/       # Modular UI blocks (Hero, About, etc.)
+│   ├── data/               # Centralized data stores
+│   │   ├── config.js       # Global configuration and WhatsApp templates
+│   │   ├── hardware.js     # Hardware product catalog
+│   │   ├── services.js     # Service offerings
+│   │   ├── site_content.js # Hardcoded text and headlines
+│   │   └── software.js     # Software product catalog
+│   ├── lib/                # Utility functions
+│   ├── App.jsx             # React Router configuration
+│   ├── index.css           # Global Tailwind directives and base styles
+│   └── main.jsx            # Application entry point
+├── tailwind.config.js      # Design token definitions
+└── package.json            # Dependency manifest
+```
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
+## 🚀 Installation Guide
 
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
+Configure the development environment using these commands:
 
-## 🧩 Core Functions & Logic Explanations
+```bash
+# Clone the repository
+git clone https://github.com/jasirck/Dream-Life-Products-.git
 
-Understand the internal architecture before modifying the structural logic:
+# Navigate into the project directory
+cd dream-life-frontend
 
-- **Data Hydration:** Standardized JSON objects inside `software.js`, `hardware.js`, and `services.js` organize media links and descriptive text. React components map over these arrays to inject content uniformly.
-- **Dynamic Pages:** The `ProductDetailPage` component parses the URL using React Router's `useParams()`. It extracts an item ID, searches the unified data arrays to find the matching entry, and renders a dedicated layout.
-- **WhatsApp Configuration:** The centralized `config.js` script holds a dynamic URL generator function inside the `whatsappConfig` object. The product page executes this function, passing the active browser URL and page title to form a seamless `.wa.me/` hyperlink.
+# Install dependencies using npm
+npm install
 
-## 🤝 Recruitment & Developer Onboarding
+# Start the Vite development server locally
+npm run dev
 
-Welcome to the team. To contribute effectively, familiarize yourself with our project structure immediately. 
+# Build the application for production deployment
+npm run build
+```
 
-- **Components Mapping:** Group UI elements in `src/components/sections/` and global navigation components in `src/components/layout/`.
-- **Data Editing:** Update site content strictly inside the `src/data/` folder. Do not hardcode text variables inside generic React JSX components. 
-- **Typography & Color Compliance:** Stick to the primary neon accent (`#bfd733`, configured via Tailwind `text-primary`). Maintain text hierarchies: Montserrat constructs body text, Orbitron controls display titles, and Teko designs prominent section headers.
+## 📐 Development Guidelines
 
-We prioritize strict layout responsiveness. Test on mobile viewports to prevent horizontal overflow before submitting pull requests.
+When contributing to this project, follow these established patterns:
+
+- **Component Creation:** Place reusable UI blocks in `src/components/sections/`. Place full page-level views in `src/components/pages/`.
+- **Data Modification:** Edit copy, links, and media exclusively in the `src/data/` folder. Do not hardcode textual content into JSX components.
+- **Typography Standards:** 
+  - `font-sans` (Montserrat) for body text.
+  - `font-display` (Orbitron) for primary titles.
+  - `font-teko` (Teko) for section headers.
+- **Color System:** Use `bg-obsidian` for main backgrounds. Use `text-primary` for neon green accents. Ensure adequate contrast ratios across all screens.
+
+## 🐛 Troubleshooting
+
+- **Horizontal Scroll Issues:** Verify parent containers use `overflow-x-hidden`. Ensure absolute `.w-screen` positioned elements do not breach viewport boundaries.
+- **Image Paths:** Ensure static assets referenced in data files exist in the `/public` directory or use valid external URLs.
+- **Routing Fails on Refresh:** If deploying to a static host (like Vercel or Netlify), ensure you configure rewrite rules to point all traffic loops back to `index.html`.
+
+## 🤝 Contributing
+
+We welcome improvements and bug fixes. To contribute:
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/your-feature-name`).
+3. Commit your changes (`git commit -m "feat: your concise message"`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Open a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
