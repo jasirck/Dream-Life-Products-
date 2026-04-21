@@ -166,7 +166,7 @@ export default function HardwarePage() {
                       transition={{ duration: 0.5 }}
                       className="w-20 h-20 md:w-24 md:h-24 glass-glow rounded-[2rem] flex items-center justify-center border border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.5)] bg-white/5 backdrop-blur-xl group-hover:bg-primary/20 transition-colors"
                     >
-                      <img src={product.image} alt={`${product.title} icon`} className="w-12 h-12 md:w-14 md:h-14 object-contain filter drop-shadow-lg" />
+                      <img src={product.image} alt={`${product.title} icon`} className="w-16 h-16 md:w-16 md:h-16 object-cover rounded-full bg-white filter drop-shadow-lg" />
                     </motion.div>
                   </div>
                   <div className="relative z-10 flex-1 flex flex-col justify-center">

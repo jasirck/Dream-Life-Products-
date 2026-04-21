@@ -184,7 +184,7 @@ export default function SoftwarePage() {
                       transition={{ duration: 0.5 }}
                       className="w-24 h-24 glass-glow rounded-[2rem] flex items-center justify-center border border-white/5 shadow-inner bg-white/5 backdrop-blur-xl group-hover:bg-primary/20 transition-colors"
                     >
-                      <img src={product.image} alt={`${product.title} icon`} className="w-14 h-14 object-contain filter drop-shadow-lg" />
+                      <img src={product.image} alt={`${product.title} icon`} className="w-16 h-16 object-cover rounded-full bg-white filter drop-shadow-lg" />
                     </motion.div>
                   </div>
                   <div className="relative z-10 flex-1 flex flex-col justify-center">

@@ -8,7 +8,7 @@ export const softwareProducts = [
     title: "ta:sk",
     short_description: "A robust Windows-based financial management tool for tracking transactions, inventory, and sales.",
     description: "TASK'OS is a robust Windows-based financial management tool that helps businesses track transactions, inventory, sales, and deliveries. It ensures product availability, creates detailed reports, and delivers real-time financial insights, all designed to streamline operations and support strategic decision-making.",
-    image: "./software/task.jpeg",
+    image: "../public/software/task.jpeg",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -16,7 +16,7 @@ export const softwareProducts = [
     title: "SHADE+",
     short_description: "Adaptable hospital management solution for patient tracking, billing, and revenue oversight.",
     description: "Shade Hospital Management Software is an adaptable solution for healthcare facilities, providing essential tools for patient tracking, appointment coordination, billing, revenue oversight, and comprehensive reporting. It aims to simplify administrative tasks and enhance the quality of patient care.",
-    image: "./software/shade.jpeg",
+    image: "../public/software/shade.jpeg",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -24,7 +24,7 @@ export const softwareProducts = [
     title: "VTASK",
     short_description: "Pharmacy management software automating inventory, revenue, and billing for wholesale and retail.",
     description: "VTASK is a Pharmacy Management software that automates inventory control, revenue tracking, and billing processes, serving both wholesale and retail sectors. It offers robust reporting and analytics, enhancing efficiency, accuracy, and overall patient safety.",
-    image: "https://img.icons8.com/color/96/000000/pills.png",
+    image: "../public/software/v-task.jpeg",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -32,7 +32,7 @@ export const softwareProducts = [
     title: "DINE",
     short_description: "Restaurant management software simplifying ordering, billing, and seamless POS integration.",
     description: "DINE is a restaurant management software that simplifies ordering, billing, and payment processes. It integrates seamlessly with POS systems and Android platforms, and provides detailed reports and analytics on sales, inventory, and customer behavior.",
-    image: "https://img.icons8.com/color/96/000000/restaurant.png",
+    image: "../public/software/dine.jpeg",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -40,7 +40,7 @@ export const softwareProducts = [
     title: "CLUB LOGIC",
     short_description: "Optimization tool for fitness clubs, managing memberships, scheduling, and billing efficiency.",
     description: "Club Logic is a software solution for fitness clubs and gyms that optimizes membership management, attendance tracking, scheduling, billing, and fee collection. It saves time and boosts customer satisfaction through streamlined operations and efficient management.",
-    image: "https://img.icons8.com/color/96/000000/dumbbell.png",
+    image: "../public/software/club_logic.jpeg",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -48,7 +48,7 @@ export const softwareProducts = [
     title: "Magnet",
     short_description: "Digital platform for school operations, enhancing communication and administrative accuracy.",
     description: "Magnet is a digital platform designed to streamline school operations and enhance data accuracy and communication. It simplifies managing student and teacher records, tracking attendance, and other administrative tasks, enabling schools to concentrate on delivering quality education.",
-    image: "https://img.icons8.com/color/96/000000/school.png",
+    image: "../public/software/magnet.jpeg",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -56,7 +56,7 @@ export const softwareProducts = [
     title: "AURIC",
     short_description: "Tailored jewelry management software for retail and wholesale inventory and accounting.",
     description: "Auric is a software solution tailored for jewellery retailers, wholesalers, and manufacturers. It supports inventory management, customer tracking, sales, and accounting, with features such as barcoding, gemstone tracking, and product customization.",
-    image: "https://img.icons8.com/color/96/000000/diamond.png",
+    image: "../public/software/auric.jpeg",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -64,7 +64,7 @@ export const softwareProducts = [
     title: "STAR STAY",
     short_description: "Intuitive hotel management software for front-desk, bookings, and automated reporting.",
     description: "STARSTAY is an intuitive hotel management software that enhances operations such as front-desk management, room bookings, billing, housekeeping, and reporting. It automates manual tasks and integrates with other systems to boost efficiency and streamline hotel management.",
-    image: "https://img.icons8.com/color/96/000000/5-star-hotel.png",
+    image: "../public/software/star_stay.jpeg",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   }
 ];
