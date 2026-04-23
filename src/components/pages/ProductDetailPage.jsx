@@ -194,13 +194,22 @@ export default function ProductDetailPage() {
           {/* ── Photographic Main Image (only for items with full photos) ── */}
           {!isInternalIcon && (
             <motion.div variants={itemVariants} className="mb-12 md:mb-16">
-              <div className="relative group overflow-hidden rounded-[2.5rem] border border-white/10 shadow-2xl">
+              <div className="relative group overflow-hidden rounded-[2.5rem] border border-white/10 shadow-2xl bg-obsidian w-full h-[300px] md:h-[450px] flex items-center justify-center">
+                
+                {/* Dynamically Blurred Background for adaptive ratio filling */}
+                <div 
+                  className="absolute inset-0 opacity-30 blur-3xl scale-[1.2] bg-center bg-cover bg-no-repeat transition-transform duration-1000"
+                  style={{ backgroundImage: `url(${product.image})` }}
+                ></div>
+
+                {/* Contained foreground image with no cropping */}
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-64 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="relative z-10 w-full h-full object-contain p-6 md:p-10 transition-transform duration-700 group-hover:scale-105 drop-shadow-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-transparent to-transparent"></div>
+
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </motion.div>
           )}
