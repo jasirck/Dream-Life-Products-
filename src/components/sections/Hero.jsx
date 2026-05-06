@@ -82,9 +82,9 @@ export function Hero() {
                 hidden: { opacity: 0, y: 30 },
                 show: { opacity: 1, y: 0 }
               }}
-              className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-black tracking-tight text-white leading-tight mb-8 uppercase"
+              className="text-3xl md:text-4xl lg:text-[3.5rem] font-display font-black tracking-tight text-white leading-tight mb-8 uppercase"
             >
-              {heroContent.title} <span className="text-primary block mt-2 drop-shadow-[0_0_20px_rgba(191,215,51,0.2)]">{heroContent.titleAccent}</span>
+              {heroContent.title}<span className="text-primary block mt-2 drop-shadow-[0_0_20px_rgba(191,215,51,0.2)]">{heroContent.titleAccent}</span>
             </motion.h1>
 
             <motion.p
