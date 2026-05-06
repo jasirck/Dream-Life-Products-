@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Activity, Zap, Sparkles, Globe, Cpu } from 'lucide-react';
-import { heroContent } from '../../data/site_content';
+import { heroContent, HomeImages as heroImages } from '../../data/home';
 
 // Reusable component for floating background icons
 const FloatingIcon = ({ Icon, className, delay, duration, yRange, xRange }) => (
@@ -33,7 +33,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-obsidian to-obsidian"></div>
 
       {/* Animated Tech Grid Background */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 bg-[linear-gradient(rgba(191,215,51,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(191,215,51,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"
         animate={{ backgroundPosition: ['0px 0px', '60px 60px'] }}
         transition={{ repeat: Infinity, duration: 4, ease: 'linear' }}
@@ -82,7 +82,7 @@ export function Hero() {
                 hidden: { opacity: 0, y: 30 },
                 show: { opacity: 1, y: 0 }
               }}
-              className="text-5xl md:text-6xl lg:text-7xl font-display font-black tracking-tight text-white leading-[1.05] mb-8 uppercase"
+              className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-black tracking-tight text-white leading-tight mb-8 uppercase"
             >
               {heroContent.title} <span className="text-primary block mt-2 drop-shadow-[0_0_20px_rgba(191,215,51,0.2)]">{heroContent.titleAccent}</span>
             </motion.h1>
@@ -92,7 +92,7 @@ export function Hero() {
                 hidden: { opacity: 0, y: 20 },
                 show: { opacity: 1, y: 0 }
               }}
-              className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light font-sans"
+              className="text-base md:text-lg text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light font-sans"
             >
               {heroContent.description}
             </motion.p>
@@ -129,21 +129,45 @@ export function Hero() {
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 1 }}
-                    className="h-28 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl w-full"
-                  ></motion.div>
+                    className="h-28 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl w-full relative overflow-hidden group"
+                  >
+                    {heroImages[0] && (
+                      <img
+                        src={heroImages[0].img}
+                        alt={heroImages[0].alt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    )}
+                  </motion.div>
                   <div className="flex gap-6">
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 1.2 }}
-                      className="h-36 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl flex-1 shadow-inner"
-                    ></motion.div>
+                      className="h-36 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl flex-1 shadow-inner relative overflow-hidden group"
+                    >
+                      {heroImages[1] && (
+                        <img
+                          src={heroImages[1].img}
+                          alt={heroImages[1].alt}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      )}
+                    </motion.div>
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 1.4 }}
-                      className="h-36 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl flex-1 shadow-inner"
-                    ></motion.div>
+                      className="h-36 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl flex-1 shadow-inner relative overflow-hidden group"
+                    >
+                      {heroImages[2] && (
+                        <img
+                          src={heroImages[2].img}
+                          alt={heroImages[2].alt}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      )}
+                    </motion.div>
                   </div>
                 </div>
               </div>
@@ -191,8 +215,8 @@ export function Hero() {
                   <Zap className="text-primary" size={24} />
                 </div>
                 <div>
-                  <div className="text-base font-bold text-white uppercase font-display">{heroContent.performance.title}</div>
-                  <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-sans">{heroContent.performance.subtitle}</div>
+                  <div className="text-base font-bold text-white uppercase font-display">{heroContent.performance.value}</div>
+                  <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-sans">{heroContent.performance.label}</div>
                 </div>
               </motion.div>
             </div>

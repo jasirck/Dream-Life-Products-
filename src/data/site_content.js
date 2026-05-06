@@ -4,30 +4,17 @@
  * Static content for the landing page Hero component.
  * Configures the main banner text and quantitative performance metrics.
  */
-export const heroContent = {
-  badge: "Future-Proof Solutions",
-  title: "Shaping The Future Through",
-  titleAccent: "Precision & Power",
-  description: "Welcome to DREAM LIFE. We craft elite digital ecosystems that blend meticulous engineering with high-end aesthetic precision.",
-  efficiency: {
-    value: "98%",
-    label: "Efficiency Gain"
-  },
-  performance: {
-    title: "Elite Performance",
-    subtitle: "Processing Tier"
-  }
-};
+
 
 /**
  * Copy and statistics for the general About section.
  * Renders company mission statements and numerical achievements on the home and about pages.
  */
 export const aboutContent = {
-  badge: "About Dream Life Products",
-  titlePrefix: "Resilience Shines In The Face Of",
-  titleAccent: "Challenges",
-  description: "We consistently deliver excellence, driven by a commitment to innovation and quality. Our robust frameworks and dedicated team ensure your vision transforms into a digital reality effortlessly.",
+  badge: "ABOUT DREAM LIFE PRODUCTS",
+  titlePrefix: "SMART SYSTEMS BUILT FOR MODERN",
+  titleAccent: "BUSINESSES",
+  description: "DREAM LIFE PRODUCTS is focused on transforming the way businesses operate through smart technology and reliable system solutions. From billing and inventory to complete business management, we provide solutions that simplify operations, improve efficiency, and give you full control over your business. Our approach combines practical experience with modern technology to deliver systems that are fast, secure, and built for real world use.",
   checkPoints: [
     "Delivering cutting-edge solutions tailored to requirements.",
     "Maintaining industry standards with rigorous quality checks."

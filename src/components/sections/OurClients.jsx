@@ -52,17 +52,17 @@ export function OurClients() {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <motion.div
-            className="flex shrink-0 gap-10 md:gap-16 px-10"
-            animate={{
-              x: isPaused ? undefined : ["0%", "-50%"]
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                duration: 40,
-                ease: "linear",
-              }
+          <style>{`
+            @keyframes scrollMarquee {
+              0% { transform: translateX(0%); }
+              100% { transform: translateX(-50%); }
+            }
+          `}</style>
+          <div
+            className="flex shrink-0 gap-10 md:gap-16 px-10 py-5"
+            style={{
+              animation: 'scrollMarquee 40s linear infinite',
+              animationPlayState: isPaused ? 'paused' : 'running'
             }}
           >
             {duplicated.map((client, idx) => (
@@ -86,7 +86,7 @@ export function OurClients() {
                 </span>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
