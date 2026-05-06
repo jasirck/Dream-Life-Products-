@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MonitorPlay } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import { softwareProducts } from '../../data/software';
 import { sectionHeadlines } from '../../data/site_content';
@@ -49,24 +49,35 @@ export function SoftwareSolutions() {
             <Link to={`/softwares/${item.id}`} key={item.id} className="block">
               <motion.div
                 variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  show: { opacity: 1, y: 0 }
+                  hidden: { opacity: 0, y: 40, scale: 0.95 },
+                  show: { opacity: 1, y: 0, scale: 1 }
                 }}
-                whileHover={{ y: -12, scale: 1.02 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="glass-dark rounded-[2.5rem] p-10 flex flex-col group border border-white/5 shadow-2xl relative overflow-hidden h-full"
+                transition={{ type: "spring", bounce: 0.4 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="glass-dark rounded-[2.5rem] p-8 md:p-10 border border-white/10 shadow-2xl flex flex-col relative overflow-hidden group hover:border-primary/30 transition-all duration-500 h-full cursor-pointer"
               >
-                {/* Background Glow */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors"></div>
+                {/* Glow Effect on Hover */}
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 rounded-[3rem]"></div>
 
-                <div className="relative z-10 h-full flex flex-col">
-                  <div className="w-16 h-16 glass-glow rounded-3xl flex items-center justify-center text-primary mb-8 shadow-xl border border-white/10 group-hover:rotate-6 transition-all overflow-hidden bg-white/5">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover p-3 opacity-80 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <h4 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-primary transition-colors">{item.title}</h4>
-                  <p className="text-slate-400 font-light leading-relaxed mb-10 text-lg">
+                <div className="relative z-10 flex flex-col h-full">
+                  <motion.div
+                    whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-20 h-20 md:w-24 md:h-24 glass-glow rounded-[2rem] flex items-center justify-center border border-white/5 shadow-inner bg-white/5 backdrop-blur-xl group-hover:bg-primary/20 transition-colors mb-8"
+                  >
+                    <img src={item.image} alt={`${item.title} icon`} className="w-14 h-14 md:w-16 md:h-16 object-cover rounded-full bg-white filter drop-shadow-lg" />
+                  </motion.div>
+                  
+                  <h3 className="text-2xl lg:text-3xl font-sans font-bold text-white mb-3 group-hover:text-primary transition-colors tracking-tight flex items-center gap-3">
+                    {item.title}
+                    <MonitorPlay size={20} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-accent shrink-0" />
+                  </h3>
+                  
+                  <p className="text-slate-400 font-light leading-relaxed mb-10 text-base md:text-lg">
                     {item.short_description}
                   </p>
+                  
                   <div className="flex items-center gap-2 text-primary font-bold text-sm tracking-widest uppercase group/btn mt-auto">
                     Explore Product <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
                   </div>
