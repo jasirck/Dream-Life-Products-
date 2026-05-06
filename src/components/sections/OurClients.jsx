@@ -59,7 +59,7 @@ export function OurClients() {
             }
           `}</style>
           <div
-            className="flex shrink-0 gap-10 md:gap-16 px-10 py-5"
+            className="flex shrink-0 gap-10 md:gap-16 px-10 py-10"
             style={{
               animation: 'scrollMarquee 40s linear infinite',
               animationPlayState: isPaused ? 'paused' : 'running'
