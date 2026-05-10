@@ -14,10 +14,10 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <About />
       <SoftwareSolutions />
       <HardwareSolutions />
       <Services />
+      <About />
       <OurClients />
     </>
   );
