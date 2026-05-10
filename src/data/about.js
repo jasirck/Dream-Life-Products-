@@ -3,12 +3,12 @@
  * Rendered within the About and Hero sections to represent company culture.
  */
 export const aboutImages = [
-  { id: 1, img: "./public/about/about_1.png" },
-  { id: 2, img: "./public/about/about_2.png" },
-  { id: 3, img: "./public/about/about_3.png" },
-  { id: 4, img: "./public/about/about_4.png" },
-  { id: 5, img: "./public/about/about_5.png" },
-  { id: 6, img: "./public/about/about_6.png" }
+  { id: 1, img: "public/about/about_1.png" },
+  { id: 2, img: "public/about/about_2.png" },
+  { id: 3, img: "public/about/about_3.png" },
+  { id: 4, img: "public/about/about_4.png" },
+  { id: 5, img: "public/about/about_5.png" },
+  { id: 6, img: "public/about/about_6.png" }
 ];
 
 
