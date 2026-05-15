@@ -81,7 +81,7 @@ export const devCards = [
     title: "Web Design & Development",
     short_description: "Visually stunning and highly functional websites tailored to your needs.",
     description: "Our web design and development services create visually stunning and highly functional websites tailored to your business needs. We focus on user experience, responsive design, and seamless functionality to ensure your online presence stands out and performs optimally across all devices.",
-    image: "/software/software_web.png",
+    image: "/software/software_webdesign_development.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {

@@ -29,20 +29,16 @@ export const softwarePageContent = {
  * Defines section intros and types of physical infrastructure services.
  */
 export const hardwarePageContent = {
-  hero: {
-    badge: "Premium Hardware Integration",
-    title: "High-Performance Hardware Solutions",
-    titleAccent: "For Your Needs",
-    description: "At Dream Life Products, we deliver high-performance hardware solutions tailored to meet your specific needs. Our advanced components and systems are designed to enhance efficiency and reliability, ensuring optimal results for your business."
-  },
   intro: {
-    title: "Advanced Hardware Solutions",
-    subtitle: "For Optimal Performance",
-    description: "At Dream Life Products, we offer advanced hardware solutions designed to deliver optimal performance and reliability. Our range includes cutting-edge components and systems tailored to meet diverse needs, from high-performance computing to robust security setups."
+    title: "Reliable Hardware Solutions",
+    subtitle: "Built for Modern Business Needs",
+    description:
+      "At Dream Life Products, we provide high-quality hardware solutions designed to support performance, security, and operational efficiency. From advanced computing systems to networking equipment and smart infrastructure, our hardware solutions are tailored to meet the evolving needs of businesses."
   },
   types: {
-    title: "WHAT ARE THE TYPES OF HARDWARE SOLUTIONS?",
-    description: "Hardware solutions come in various types, each designed to address specific needs and enhance functionality. These include components for computing power, security systems to protect and monitor your infrastructure, and peripherals like printers and storage devices."
+    title: "OUR HARDWARE SOLUTIONS",
+    description:
+      "We offer a wide range of hardware solutions, including computing devices, security systems, networking equipment, storage solutions, and business peripherals. Our focus is on delivering reliable, scalable, and efficient technology that helps organizations operate smoothly and securely."
   }
 };
 
