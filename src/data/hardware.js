@@ -108,48 +108,48 @@ export const hardwareProducts = [
 export const hardwareSolutions = [
   {
     id: 13,
-    title: "High-Performance Computing Hardware",
-    short_description: "Speed and efficiency for demanding tasks with reliable servers and workstations.",
-    description: "Our high-performance computing hardware delivers speed and efficiency for demanding tasks, providing reliable servers, workstations, and processing units for seamless operation.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    title: "HIGH PERFORMANCE COMPUTING HARDWARE",
+    short_description: "ABOUT HIGH PERFORMANCE COMPUTING HARDWARE.",
+    description: "Dream Life Products provides high performance computing hardware engineered for speed, reliability, and scalable business operations. From advanced workstations to enterprise-grade infrastructure, our systems are designed to deliver powerful performance for modern business environments.",
+    image: "/hardware/high_performance.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
     id: 14,
-    title: "Advanced Security Systems",
-    short_description: "Protecting your assets with surveillance cameras and sophisticated alarms.",
-    description: "Secure your business with our advanced security systems, including cutting-edge surveillance cameras and sophisticated alarms, designed to protect your assets and ensure operational safety.",
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+    title: "ADVANCED SECURITY SYSTEMS",
+    short_description: "ABOUT ADVANCED SECURITY SYSTEMS.",
+    description: "Dream Life Products delivers advanced security solutions built to keep your business protected at every level. With smart surveillance systems, intelligent monitoring, and reliable security infrastructure, we help businesses maintain safety, control access, and protect valuable assets with confidence.",
+    image: "/hardware/security_solutions.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
     id: 15,
-    title: "Efficient Storage Solutions",
-    short_description: "High-capacity, scalable networks for secure and reliable data access.",
-    description: "Enhance your data management with our efficient storage solutions, featuring high-capacity drives and scalable network systems for secure, high-performance, and reliable data access.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    title: "EFFICIENT STORAGE SOLUTIONS",
+    short_description: "ABOUT EFFICIENT STORAGE SOLUTIONS.",
+    description: "Dream Life Products delivers advanced storage solutions engineered for secure data handling, efficient performance, and scalable business operations. With reliable backup systems, network storage integration, and high capacity infrastructure, we help businesses manage and protect critical data with confidence.",
+    image: "/hardware/advanced_storage_solutions.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
     id: 16,
-    title: "Reliable Network Equipment",
-    short_description: "Stable, high-speed connectivity via routers, switches, and access points.",
-    description: "Achieve reliable connectivity with our network equipment, including routers, switches, and access points, designed for stable, high-speed connections and minimal downtime.",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    title: "RELIABLE NETWORK EQUIPMENT",
+    short_description: "ABOUT RELIABLE NETWORK EQUIPMENT.",
+    description: "Dream Life Products provides reliable network equipment engineered for fast, secure, and dependable business connectivity. With advanced networking infrastructure and optimized system integration, we help businesses maintain smooth communication, stable operations, and consistent performance across every level.",
+    image: "/hardware/reliable_network.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
     id: 17,
-    title: "Customizable Peripherals and Accessories",
-    short_description: "Ergonomic keyboards, printers, and docking stations for peak productivity.",
-    description: "Upgrade your workspace with our customizable peripherals and accessories, including ergonomic keyboards, mice, printers, and docking stations, tailored to enhance productivity and meet your specific needs.",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/055/153/207/small/technician-meticulously-connects-cables-to-complex-server-equipment-photo.jpg",
+    title: "CUSTOMIZABLE PERIPHERALS AND ACCESSORIES",
+    short_description: "ABOUT CUSTOMIZABLE PERIPHERALS AND ACCESSORIES.",
+    description: "Drem Life Products delivers customizable peripherals and accessories built to support efficient workflows and smarter business operations. With high-quality devices and tailored workspace solutions, we help businesses create productive, connected, and performance driven environments.",
+    image: "/hardware/customizable_peripherals.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
     id: 18,
-    title: "Integrated Hardware Systems",
-    short_description: "Cohesive hardware solutions ensuring compatibility and operational efficiency.",
+    title: "INTEGRATED HARDWARE SYSTEMS",
+    short_description: "ABOUT INTEGRATED HARDWARE SYSTEMS.",
     description: "Streamline your operations with our integrated hardware systems, offering cohesive solutions that ensure compatibility and efficiency for both complex and simple setups, tailored to your business needs.",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"

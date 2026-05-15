@@ -30,10 +30,15 @@ export const softwarePageContent = {
  */
 export const hardwarePageContent = {
   intro: {
-    title: "Reliable Hardware Solutions",
-    subtitle: "Built for Modern Business Needs",
-    description:
-      "At Dream Life Products, we provide high-quality hardware solutions designed to support performance, security, and operational efficiency. From advanced computing systems to networking equipment and smart infrastructure, our hardware solutions are tailored to meet the evolving needs of businesses."
+    title: "ADVANCED HARDWARE SOLUTIONS",
+    subtitle: "FOR SMART BUSINESS OPERATIONS",
+    description: `
+At Dream Life Products, we provide reliable hardware solutions designed to support modern business environments with speed, stability, and seamless performance.
+
+From POS systems and networking devices to complete infrastructure setup, we deliver integrated hardware systems that improve efficiency, connectivity, and operational control.
+
+Our solutions are built to ensure long-term reliability and smooth business operations across every level.
+`
   },
   types: {
     title: "OUR HARDWARE SOLUTIONS",
