@@ -104,9 +104,16 @@ export default function SoftwarePage() {
                         {product.title}
                         <MonitorPlay size={20} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-accent" />
                       </h3>
-                      <p className="text-slate-400 font-light leading-relaxed text-base md:text-lg">
+                      <p className="text-slate-400 font-light leading-relaxed text-base md:text-lg mb-6">
                         {product.short_description}
                       </p>
+                      
+                      <div className="mt-auto pt-2 flex items-center gap-2 text-primary font-bold text-sm tracking-wide uppercase group-hover:text-white transition-colors">
+                        View Details
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </div>
                     </div>
                   </motion.div>
                 </Link>
