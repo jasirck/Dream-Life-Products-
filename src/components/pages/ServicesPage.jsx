@@ -56,50 +56,10 @@ export default function ServicesPage() {
         <FloatingIcon Icon={PenTool} className="top-[90%] left-[20%]" delay={1.5} duration={15} yRange={[0, -30, 0]} xRange={[0, 30, 0]} />
       </div>
 
-      <div className="relative z-10 w-full flex flex-col pt-32">
+      <div className="relative z-10 w-full flex flex-col pt-16">
 
-      {/* Section 2: Introduction */}
-      <section className="py-12 md:py-24 relative z-20">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10 glass-dark p-10 md:p-16 rounded-[3.5rem] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] group overflow-hidden">
-          {/* Dynamic Card Glow */}
-          <motion.div
-            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[150%] bg-primary/20 blur-[120px] rounded-[100%]"
-          ></motion.div>
-
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "80px" }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-10 relative z-10"
-          ></motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            className="text-3xl md:text-5xl font-teko font-bold text-white mb-8 uppercase tracking-wide leading-tight relative z-10"
-          >
-            {servicesPageContent.intro.title}
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed font-sans relative z-10"
-          >
-            {servicesPageContent.intro.description}
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Section 3: Services Layout */}
-      <section className="py-24 relative">
+      {/* Section 1: Services Layout */}
+      <section className="py-16 md:py-24 relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-24 md:gap-32">
             {services.map((service, idx) => {
@@ -169,6 +129,46 @@ export default function ServicesPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Section 2: Introduction Description */}
+      <section className="py-16 md:py-24 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center relative glass-dark p-10 md:p-16 rounded-[3.5rem] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] group overflow-hidden">
+          {/* Dynamic Card Glow */}
+          <motion.div
+            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[150%] bg-primary/20 blur-[120px] rounded-[100%] pointer-events-none"
+          ></motion.div>
+
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "80px" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-10 relative z-10"
+          ></motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+            className="text-3xl md:text-5xl font-teko font-bold text-white mb-8 uppercase tracking-wide leading-tight relative z-10"
+          >
+            {servicesPageContent.intro.title}
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed font-sans relative z-10"
+          >
+            {servicesPageContent.intro.description}
+          </motion.p>
         </div>
       </section>
 
