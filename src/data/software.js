@@ -81,7 +81,7 @@ export const devCards = [
     title: "Web Design & Development",
     short_description: "Visually stunning and highly functional websites tailored to your needs.",
     description: "Our web design and development services create visually stunning and highly functional websites tailored to your business needs. We focus on user experience, responsive design, and seamless functionality to ensure your online presence stands out and performs optimally across all devices.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    image: "/software/software_web.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -89,7 +89,7 @@ export const devCards = [
     title: "Software Development",
     short_description: "Custom software solutions to address specific business challenges and growth.",
     description: "We provide custom software development to address your specific business challenges. Our solutions are built to enhance efficiency, streamline processes, and drive growth, utilizing the latest technologies and best practices to deliver robust and scalable software.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    image: "/software/software_development.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -97,7 +97,7 @@ export const devCards = [
     title: "Android & IOs Development",
     short_description: "Intuitive and feature-rich mobile applications for cross-platform engagement.",
     description: "Our mobile app development services cater to both Android and iOS platforms, creating intuitive and feature-rich applications. We ensure that your apps offer a seamless user experience, leveraging the latest technologies to engage users and meet your business goals.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+    image: "/software/software_android&ios.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   },
   {
@@ -105,7 +105,7 @@ export const devCards = [
     title: "Cloud Solutions",
     short_description: "Scalable and flexible infrastructure for secure and efficient collaboration.",
     description: "Our cloud solutions offer scalable and flexible infrastructure to meet your evolving needs. From cloud storage and computing to managed services, we provide secure and efficient solutions that enhance collaboration, improve accessibility, and drive innovation for your business.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    image: "/software/software_cloud.png",
     youtube_link: "https://youtu.be/iSISL94vvW8?si=60YNXGCkSx5ODcDr"
   }
 ];

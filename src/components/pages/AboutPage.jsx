@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Award, Heart, Lightbulb } from 'lucide-react';
 import { About } from '../sections/About';
-import { aboutContent } from '../../data/site_content';
+// import { aboutContent } from '../../data/site_content';
 
 /**
  * Abstract subcomponent controlling the ambient icon rotation and translation.

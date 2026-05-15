@@ -33,76 +33,47 @@ export default function HardwarePage() {
   const yElement = useTransform(scrollYProgress, [0, 1], [0, 300]);
 
   return (
-    <div className="w-full bg-obsidian selection:bg-primary selection:text-obsidian flex flex-col pt-16">
-
-      {/* Section 1: Hero Banner */}
-      <section className="pt-24 pb-32 relative bg-[#060606] overflow-hidden flex flex-col items-center justify-center text-center min-h-[60vh] border-b border-white/5">
+    <div className="w-full bg-[#060606] selection:bg-primary selection:text-obsidian flex flex-col relative overflow-hidden">
+      {/* Universal Animated Background */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-[#060606] to-[#040404]"></div>
-
-        {/* Animated Tech Grid Background */}
+        
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(191,215,51,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(191,215,51,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"
           animate={{ backgroundPosition: ['0px 0px', '60px 60px'] }}
           transition={{ repeat: Infinity, duration: 4, ease: 'linear' }}
         ></motion.div>
 
-        {/* Floating Abstract Hardware Elements */}
-        <FloatingIcon Icon={Server} className="top-[10%] left-[15%]" delay={0} duration={12} yRange={[0, -30, 0]} xRange={[0, 20, 0]} />
-        <FloatingIcon Icon={Monitor} className="top-[60%] left-[5%]" delay={2} duration={14} yRange={[0, 40, 0]} xRange={[0, -20, 0]} />
-        <FloatingIcon Icon={ShieldCheck} className="top-[20%] right-[10%]" delay={1} duration={10} yRange={[0, 50, 0]} xRange={[0, -30, 0]} />
-        <FloatingIcon Icon={Printer} className="top-[70%] right-[15%]" delay={3} duration={16} yRange={[0, -40, 0]} xRange={[0, 20, 0]} />
+        <div className="absolute top-1/4 left-1/4 bg-orb-1 opacity-20 scale-150"></div>
+        <div className="absolute bottom-1/4 right-1/4 bg-orb-2 opacity-20 scale-150"></div>
+      </div>
 
-        <div className="bg-orb-1 opacity-20 scale-150"></div>
-        <div className="bg-orb-2 opacity-20 scale-150"></div>
+      {/* Floating Abstract Hardware Elements spanning the whole page */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden min-h-screen">
+        <FloatingIcon Icon={Server} className="top-[10%] left-[10%]" delay={0} duration={12} yRange={[0, -30, 0]} xRange={[0, 20, 0]} />
+        <FloatingIcon Icon={Monitor} className="top-[30%] right-[15%]" delay={2} duration={14} yRange={[0, 40, 0]} xRange={[0, -20, 0]} />
+        <FloatingIcon Icon={ShieldCheck} className="top-[50%] left-[5%]" delay={1} duration={10} yRange={[0, 50, 0]} xRange={[0, -30, 0]} />
+        <FloatingIcon Icon={Printer} className="top-[70%] right-[10%]" delay={3} duration={16} yRange={[0, -40, 0]} xRange={[0, 20, 0]} />
+      </div>
 
-        <motion.div
-          style={{ y: yElement }}
-          className="max-w-5xl mx-auto px-4 relative z-10"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <motion.div
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "auto" }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="inline-block overflow-hidden"
-            >
-              <div className="inline-block py-2 px-8 rounded-full glass-dark text-primary font-bold text-xs tracking-widest uppercase mb-10 border border-primary/20 shadow-[0_0_20px_rgba(191,215,51,0.1)] backdrop-blur-2xl font-sans">
-                {hardwarePageContent.hero.badge}
-              </div>
-            </motion.div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-white mb-8 tracking-tight uppercase leading-[1.1]">
-              {hardwarePageContent.hero.title}<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#d4eb44] to-accent inline-block mt-2 drop-shadow-[0_0_20px_rgba(191,215,51,0.3)]">
-                {hardwarePageContent.hero.titleAccent}
-              </span>
-            </h1>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-3xl mx-auto glass-dark p-6 md:p-8 rounded-[2rem] border border-white/5 backdrop-blur-xl shadow-2xl relative font-sans"
-          >
-            {hardwarePageContent.hero.description}
-          </motion.p>
-        </motion.div>
-      </section>
+      <div className="relative z-10 w-full flex flex-col pt-32">
 
       {/* Section 2: Introduction */}
-      <section className="py-24 md:py-32 bg-white relative z-20">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
+      <section className="py-12 md:py-24 relative z-20">
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10 glass-dark p-10 md:p-16 rounded-[3.5rem] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] group overflow-hidden">
+          {/* Dynamic Card Glow */}
+          <motion.div
+            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[150%] bg-primary/20 blur-[120px] rounded-[100%]"
+          ></motion.div>
+
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "80px" }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="h-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent mx-auto mb-10"
+            className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-10 relative z-10"
           ></motion.div>
 
           <motion.h2
@@ -110,10 +81,10 @@ export default function HardwarePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-teko font-bold text-primary mb-8 uppercase tracking-wide leading-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-teko font-bold text-white mb-8 uppercase tracking-wide leading-tight relative z-10"
           >
             {hardwarePageContent.intro.title}<br />
-            <span className="text-slate-800 mt-2 block">{hardwarePageContent.intro.subtitle}</span>
+            <span className="text-primary mt-2 block">{hardwarePageContent.intro.subtitle}</span>
           </motion.h2>
 
           <motion.p
@@ -121,7 +92,7 @@ export default function HardwarePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed font-sans"
+            className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed font-sans relative z-10"
           >
             {hardwarePageContent.intro.description}
           </motion.p>
@@ -129,11 +100,7 @@ export default function HardwarePage() {
       </section>
 
       {/* Section 3: Hardware Products Grid */}
-      <section className="py-24 bg-obsidian relative overflow-hidden">
-        {/* Background glow elements */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
-
+      <section className="py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial="hidden"
@@ -186,13 +153,13 @@ export default function HardwarePage() {
       </section>
 
       {/* Section 4: Types of Hardware Solutions */}
-      <section className="py-24 md:py-32 bg-white relative">
-        <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+      <section className="py-24 md:py-32 relative">
+        <div className="max-w-5xl mx-auto px-4 text-center relative z-10 glass-dark p-12 rounded-[3.5rem] border border-white/5">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="w-16 h-16 bg-green-50 text-accent rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner"
+            className="w-16 h-16 bg-white/5 text-primary rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border border-white/10"
           >
             <Server size={32} />
           </motion.div>
@@ -212,7 +179,7 @@ export default function HardwarePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed max-w-4xl mx-auto font-sans"
+            className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed max-w-4xl mx-auto font-sans"
           >
             {hardwarePageContent.types.description}
           </motion.p>
@@ -220,7 +187,7 @@ export default function HardwarePage() {
       </section>
 
       {/* Section 5: Hardware Types Image Grid */}
-      <section className="py-24 bg-obsidian relative border-t border-white/5">
+      <section className="py-24 relative border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -249,7 +216,7 @@ export default function HardwarePage() {
                   ></div>
 
                   {/* Dark Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/70 to-transparent group-hover:from-obsidian/95 transition-colors duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent group-hover:from-black/95 transition-colors duration-500"></div>
                   <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   <div className="relative z-10 transform transition-transform duration-500 group-hover:-translate-y-4">
@@ -274,6 +241,7 @@ export default function HardwarePage() {
         </div>
       </section>
 
+    </div>
     </div>
   );
 }

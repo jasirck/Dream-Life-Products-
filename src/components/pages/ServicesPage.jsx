@@ -32,76 +32,48 @@ export default function ServicesPage() {
   const yElement = useTransform(scrollYProgress, [0, 1], [0, 300]);
 
   return (
-    <div className="w-full bg-obsidian selection:bg-primary selection:text-obsidian flex flex-col pt-16">
-
-      {/* Section 1: Hero Banner */}
-      <section className="pt-24 pb-32 relative bg-[#060606] overflow-hidden flex flex-col items-center justify-center text-center min-h-[60vh] border-b border-white/5">
+    <div className="w-full bg-[#060606] selection:bg-primary selection:text-obsidian flex flex-col relative overflow-hidden">
+      {/* Universal Animated Background */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-[#060606] to-[#040404]"></div>
-
-        {/* Animated Tech Grid Background */}
+        
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(191,215,51,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(191,215,51,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"
           animate={{ backgroundPosition: ['0px 0px', '60px 60px'] }}
           transition={{ repeat: Infinity, duration: 4, ease: 'linear' }}
         ></motion.div>
 
-        {/* Floating Abstract Marketing/Tech Elements */}
-        <FloatingIcon Icon={Megaphone} className="top-[10%] left-[15%]" delay={0} duration={12} yRange={[0, -30, 0]} xRange={[0, 20, 0]} />
-        <FloatingIcon Icon={Globe} className="top-[60%] left-[5%]" delay={2} duration={14} yRange={[0, 40, 0]} xRange={[0, -20, 0]} />
-        <FloatingIcon Icon={TrendingUp} className="top-[20%] right-[10%]" delay={1} duration={10} yRange={[0, 50, 0]} xRange={[0, -30, 0]} />
-        <FloatingIcon Icon={Target} className="top-[70%] right-[15%]" delay={3} duration={16} yRange={[0, -40, 0]} xRange={[0, 20, 0]} />
+        <div className="absolute top-1/4 left-1/4 bg-orb-1 opacity-20 scale-150"></div>
+        <div className="absolute bottom-1/4 right-1/4 bg-orb-2 opacity-20 scale-150"></div>
+      </div>
 
-        <div className="bg-orb-1 opacity-20 scale-150"></div>
-        <div className="bg-orb-2 opacity-20 scale-150"></div>
+      {/* Floating Abstract Marketing/Tech Elements spanning the whole page */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden min-h-screen">
+        <FloatingIcon Icon={Megaphone} className="top-[10%] left-[10%]" delay={0} duration={12} yRange={[0, -30, 0]} xRange={[0, 20, 0]} />
+        <FloatingIcon Icon={Globe} className="top-[30%] right-[15%]" delay={2} duration={14} yRange={[0, 40, 0]} xRange={[0, -20, 0]} />
+        <FloatingIcon Icon={TrendingUp} className="top-[50%] left-[5%]" delay={1} duration={10} yRange={[0, 50, 0]} xRange={[0, -30, 0]} />
+        <FloatingIcon Icon={Target} className="top-[70%] right-[10%]" delay={3} duration={16} yRange={[0, -40, 0]} xRange={[0, 20, 0]} />
+        <FloatingIcon Icon={PenTool} className="top-[90%] left-[20%]" delay={1.5} duration={15} yRange={[0, -30, 0]} xRange={[0, 30, 0]} />
+      </div>
 
-        <motion.div
-          style={{ y: yElement }}
-          className="max-w-5xl mx-auto px-4 relative z-10"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <motion.div
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "auto" }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="inline-block overflow-hidden"
-            >
-              <div className="inline-block py-2 px-8 rounded-full glass-dark text-primary font-bold text-xs tracking-widest uppercase mb-10 border border-primary/20 shadow-[0_0_20px_rgba(191,215,51,0.1)] backdrop-blur-2xl font-sans">
-                {servicesPageContent.hero.badge}
-              </div>
-            </motion.div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-white mb-8 tracking-tight uppercase leading-[1.1]">
-              {servicesPageContent.hero.title}<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#d4eb44] to-accent inline-block mt-2 drop-shadow-[0_0_20px_rgba(191,215,51,0.3)]">
-                {servicesPageContent.hero.titleAccent}
-              </span>
-            </h1>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-3xl mx-auto glass-dark p-6 md:p-8 rounded-[2rem] border border-white/5 backdrop-blur-xl shadow-2xl relative font-sans"
-          >
-            {servicesPageContent.hero.description}
-          </motion.p>
-        </motion.div>
-      </section>
+      <div className="relative z-10 w-full flex flex-col pt-32">
 
       {/* Section 2: Introduction */}
-      <section className="py-24 md:py-32 bg-[#060606] relative z-20">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
+      <section className="py-12 md:py-24 relative z-20">
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10 glass-dark p-10 md:p-16 rounded-[3.5rem] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] group overflow-hidden">
+          {/* Dynamic Card Glow */}
+          <motion.div
+            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[150%] bg-primary/20 blur-[120px] rounded-[100%]"
+          ></motion.div>
+
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "80px" }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-10"
+            className="h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-10 relative z-10"
           ></motion.div>
 
           <motion.h2
@@ -109,7 +81,7 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            className="text-3xl md:text-5xl font-teko font-bold text-white mb-8 uppercase tracking-wide leading-tight"
+            className="text-3xl md:text-5xl font-teko font-bold text-white mb-8 uppercase tracking-wide leading-tight relative z-10"
           >
             {servicesPageContent.intro.title}
           </motion.h2>
@@ -119,7 +91,7 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed font-sans"
+            className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed font-sans relative z-10"
           >
             {servicesPageContent.intro.description}
           </motion.p>
@@ -127,7 +99,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Section 3: Services Layout */}
-      <section className="pb-32 bg-obsidian relative">
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-24 md:gap-32">
             {services.map((service, idx) => {
@@ -200,6 +172,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+    </div>
     </div>
   );
 }
